@@ -24,12 +24,17 @@ public class MainSinhVien {
 		for (int i = 0; i < sv.length - 1; i++) {
 			for (int j = i + 1; j < sv.length; j++) {
 				if (sv[i].age < sv[j].age) {
-					int temp = sv[i].age;
-					sv[i].age = sv[j].age;
-					sv[j].age = temp;
+					SinhVien temp = sv[i];
+					sv[i] = sv[j];
+					sv[j] = temp;
 				}
 			}
 		}
+		System.out.println("mang sau khi sap xep");
+		for (int i = 0; i < sv.length; i++) {
+			sv[i].info();
+		}
+		
 
 		int max = sv[0].age;
 		for (int i = 0; i < sv.length; i++) {
